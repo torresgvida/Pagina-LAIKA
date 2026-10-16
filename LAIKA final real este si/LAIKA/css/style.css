@@ -1,0 +1,534 @@
+
+/* FUENTE */
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(#0c0c1e 50%, #3ad2db 100%);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #72c7d7;
+    margin: 0 0 25px 0;
+    padding-left: 20px;
+}
+
+h2 {
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* MENÚ */
+.menu {
+    width: 100%;
+    max-width: 900px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#0c0c1e 0%, #3ad2db 100%);
+}
+
+.logo {
+    height: 150px;
+    max-width: 60%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    padding-top: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.tela1,
+.tela2 {
+    height: 200px;
+    width: auto;
+    max-width: 35%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.tela1 {
+    left: 0;
+}
+
+.tela2 {
+    right: 0;
+}
+
+/* BARRA DE NAVEGACIÓN */
+.navbar {
+    width: 100%;
+    max-width: 900px;
+    padding: 16px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin: 0 auto;
+    background-color: #0c0c1e;
+    border-top: 3px solid #3ad2db;
+    border-bottom: 3px solid #3ad2db;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.navbar a {
+    color: #ffffff;
+    padding: 8px 12px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #3ad2db;
+}
+
+/* PORTADA */
+.portada-seccion {
+    width: 100%;
+    max-width: 900px;
+    margin: 35px auto 0;
+}
+
+.PortadaP {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #55d7d5;
+}
+
+.PortadaP p {
+    margin: 0;
+}
+
+.portada {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-image: url("https://www.datocms-assets.com/153672/1789598022-ww_tickets_keyart_webtakeover_2560x1440px.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: -1px -4px 5px rgba(3, 4, 16, 0.75);
+}
+
+.cuerpo {
+    width: 100%;
+    padding: 15px 25px;
+    margin: 0 auto;
+}
+
+.cuerpo p {
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: center;
+    color: #72c7d7;
+}
+
+/* HISTORIA */
+#Historia,
+#Films,
+#Personajes,
+#Premios {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 0 20px;
+}
+
+.historia-contenido {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 0 20px;
+}
+
+.historia-texto {
+    flex: 1;
+    min-width: 0;
+}
+
+.historia-texto h5 {
+    color: #3ad2db;
+    font-size: 17px;
+    margin: 0 0 15px;
+}
+
+.historia-texto p {
+    color: #72c7d7;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0;
+    text-align: justify;
+}
+
+.historia-contenido img {
+    width: 48%;
+    max-width: 420px;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 0 8px 30px rgba(32, 119, 175, 0.5);
+}
+
+/* CARTELERA */
+.peliculas {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0 15px;
+}
+
+.inline-block {
+    background: #3ad2db;
+    color: #0c0c1e;
+    padding: 12px;
+    margin: 0;
+    width: 260px;
+    min-height: 360px;
+    text-align: center;
+}
+
+.inline-block h2 {
+    margin: 5px 0 12px;
+}
+
+.inline-block img {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    height: 280px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+/* PERSONAJES */
+.block {
+    width: 100%;
+    min-height: 260px;
+    padding: 20px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: rgba(12, 12, 30, 0.75);
+    color: #ffffff;
+}
+
+.block img {
+    width: 200px;
+    max-width: 35%;
+    height: 220px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.descripcion {
+    flex: 1;
+    min-width: 0;
+}
+
+.descripcion h2 {
+    font-size: 18px;
+    color: #72c7d7;
+}
+
+.descripcion p {
+    text-align: justify;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* PREMIOS */
+#Premios h1 {
+    color: #ffffff;
+}
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #ffffff;
+    background-color: rgba(3, 4, 16, 0.5);
+    text-align: left;
+    font-size: 13px;
+}
+
+th,
+td {
+    padding: 15px 12px;
+    border: 1px solid rgba(58, 210, 219, 0.45);
+    vertical-align: top;
+}
+
+th {
+    background-color: #0c0c1e;
+    color: #55d7d5;
+}
+
+/* FORMULARIO */
+.seccion-formulario {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px 20px;
+}
+
+.tituloform {
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    padding: 0;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.Formulario {
+    width: 100%;
+    max-width: 500px;
+    margin: 25px auto 0;
+    padding: 30px;
+    background-color: rgba(58, 210, 219, 0.5);
+    color: #0c0c1e;
+}
+
+.Formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Formulario label {
+    text-align: left;
+    font-size: 14px;
+}
+
+.Formulario input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #0c0c1e;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.Formulario button {
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0c0c1e;
+    color: #ffffff;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.Formulario button:hover {
+    background-color: #164c62;
+}
+
+/* ESPACIO ANTES DEL FOOTER */
+.elemento {
+    height: 60px;
+}
+
+/* FOOTER */
+#final {
+    width: 100%;
+    max-width: 900px;
+    min-height: 350px;
+    margin: 0 auto;
+    padding: 35px 20px;
+    background-color: #0c0c1e;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    text-align: center;
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.footer-logos img {
+    height: 50px;
+    max-width: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+.footer-title-img {
+    width: 100%;
+    max-width: 190px;
+    height: auto;
+    display: block;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 13px;
+}
+
+.footer-links li {
+    display: flex;
+    align-items: center;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #3ad2db;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+/* ADAPTACIÓN A CELULARES */
+@media (max-width: 600px) {
+    .menu {
+        height: 150px;
+    }
+
+    .logo {
+        height: 120px;
+        padding-top: 25px;
+    }
+
+    .tela1,
+    .tela2 {
+        height: 150px;
+    }
+
+    .navbar {
+        gap: 2px;
+        padding: 10px 5px;
+    }
+
+    .navbar a {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .portada-seccion {
+        margin-top: 20px;
+    }
+
+    .PortadaP {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    #Historia,
+    #Films,
+    #Personajes,
+    #Premios {
+        padding-top: 55px;
+    }
+
+    .historia-contenido {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .historia-contenido img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .peliculas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inline-block {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .block {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .block img {
+        width: 180px;
+        max-width: 100%;
+        height: 200px;
+    }
+
+    .descripcion {
+        width: 100%;
+    }
+
+    .descripcion h2 {
+        text-align: center;
+    }
+
+    .tabla-contenedor table {
+        min-width: 600px;
+    }
+
+    .tituloform {
+        font-size: 21px;
+    }
+
+    .Formulario {
+        padding: 20px;
+    }
+
+    .footer-logos {
+        gap: 20px;
+    }
+
+    .footer-links {
+        gap: 12px;
+    }
+}
